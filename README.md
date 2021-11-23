@@ -17,3 +17,40 @@
 - python parser.py "딕셔너리 빼기"
  
 (5) 커맨드 결과 창에 각 풀이자의 시간/공간 복잡도의 평균 점수가 출력되고, json 형식의 원본 데이터와 html 형식의 집계 파일이 해당 폴더에 저장됩니다.
+
+# 샘플 데이터 결과
+[json 형식의 원본 데이터]
+{"name": {"0": "이성진", "1": "김무천", "2": "김아무개"}, "time_complexity": {"0": 1.02, "1": 0.02, "2": 0.04}, "space_complexity": {"0": 20.5, "1": 20.4, "2": 20.5}}
+
+[html 형식의 집계 파일]
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>time_complexity</th>
+      <th>space_complexity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>김무천</td>
+      <td>0.02</td>
+      <td>20.4</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>김아무개</td>
+      <td>0.04</td>
+      <td>20.5</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>이성진</td>
+      <td>1.02</td>
+      <td>20.5</td>
+    </tr>
+  </tbody>
+</table>
+
