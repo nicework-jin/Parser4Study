@@ -36,7 +36,8 @@
 4. 출력 결과는 [parser.py]이 위치한 경로에 두 파일로 저장됩니다.
 - "./result/문제명/문제명.json"
 - "./result/문제명/문제명.html"
-https://github.com/nicework-jin/parser4Study/issues/1#issue-1063856004
+![image](https://user-images.githubusercontent.com/42059680/143489072-f463cb75-be74-4d7e-b198-4b8e73627145.png)
+
 
 ## multiple_parer.py (지정한 경로에 모든 문제 파싱하기)
 
@@ -50,4 +51,4 @@ https://github.com/nicework-jin/parser4Study/issues/1#issue-1063856004
 - "./result/문제명01/문제명01.json", "./result/문제명02/문제명02.json", ...
 - "./result/md/연월일.md"
     - 여러 개의 html 파일을 하나로 묶은 마크다운 형식의 파일입니다. 
-<br>
+![image](https://user-images.githubusercontent.com/42059680/143489238-b6401482-9c05-4b80-aaeb-66ae238a0b26.png)
