@@ -78,7 +78,7 @@
 - "./result/문제명01/문제명01.html", "./result/문제명02/문제명02.html" , ...
 - "./result/문제명01/문제명01.json", "./result/문제명02/문제명02.json", ...
 - "./result/md/연월일.md"
-    - 여러 개의 html 파일을 하나로 묶은 마크다운 형식의 파일입니다.
+    - 여러 개의 html 파일을 하나로 묶은 마크다운 형식의 파일입니다. <br>
 딕셔너리 빼기 
 <table border="1" class="dataframe">
   <thead>
