@@ -2,27 +2,20 @@ import sys
 import os
 import re
 import json
-from datetime import datetime
 import pandas as pd
 
 
-class Parser4Study(object):
-    def __init__(self, problem="위장"):
+class Parser(object):
+    def __init__(self, problem, route):
         self.problem = problem
+        self.route = route
+        self.saving_route = f'./result/{self.problem}'
         self.names = []
         self.time_complexities = []
         self.space_complexities = []
+        self.filenames = self.get_filenames
         self.read_file = iter(self.read_file())
-
-    def save_to_html(self):
-        year_month = datetime.today().strftime("%Y%m")
-        self.load_table_format().to_html(f'./{year_month}_{self.problem}.html')
-
-    def load_table_format(self):
-        year_month = datetime.today().strftime("%Y%m")
-
-        df = pd.read_json(f'./{year_month}_{self.problem}.json')
-        return df.sort_values(by=['time_complexity', "space_complexity"], ascending=True)
+        self.make_dirs(self.saving_route)
 
     def parse_name_and_complexities(self):
         while True:
@@ -45,16 +38,29 @@ class Parser4Study(object):
                 self.space_complexities.append(sum(space_records) / length)
 
     def read_file(self):
-        for filename in self.get_filenames():
-            with open(f'./{filename}') as f:
+        for filename in self.filenames():
+            with open(f'{self.route}/{filename}') as f:
                 yield filename, f.read()
 
     def get_filenames(self):
-        return [filename for filename in os.listdir('./') if filename.startswith(self.problem)]
+        filenames = []
+        try:
+            for filename in os.listdir(f'{self.route}/'):
+                if filename.startswith(self.problem):
+                    filenames.append(filename)
+
+            if len(filenames) == 0:
+                raise Exception("해당 문제를 찾을 수 없습니다")
+            return filenames
+
+        except Exception as e:
+            print(e)
+
+        except FileNotFoundError:
+            print("해당 문제를 찾을 수 없습니다")
 
     def save_to_json(self):
-        year_month = datetime.today().strftime("%Y%m")
-        with open(f'./{year_month}_{self.problem}.json', 'w') as f:
+        with open(f'{self.saving_route}/{self.problem}.json', 'w') as f:
             f.write(self.load_json_format())
 
     def load_json_format(self):
@@ -65,16 +71,48 @@ class Parser4Study(object):
             data["space_complexity"][i] = self.space_complexities[i]
         return json.dumps(data, ensure_ascii=False)
 
+    def save_to_html(self):
+        self.load_table_format().to_html(f'{self.saving_route}/{self.problem}.html')
 
-if __name__ == "__main__":
-    if len(sys.argv) > 2:
-        print("인자는 한 개만 허용됩니다. 문제 이름에 띄어쓰기가 포함된 경우 쌍따옴표로 표현 해주세요")
-    else:
-        parser = Parser4Study(sys.argv[1])
+    def load_table_format(self):
+        df = pd.read_json(f'./result/{self.problem}/{self.problem}.json')
+        print(df)
+        return df.sort_values(by=['time_complexity', "space_complexity"], ascending=True)
+
+    def make_dirs(self, path):
+        if not os.path.exists(path):
+            os.makedirs(path)
+
+
+def main():
+    if len(sys.argv) == 1:
+        print("문제 이름을 인자로 넣어주세요.")
+        print("인자 [문제이름]과 [파일 경로]로 최대 2 개만 허용됩니다.")
+        print("인자 이름에 띄어쓰기가 포함된 경우 쌍따옴표로 표현 해주세요.")
+
+    elif len(sys.argv) == 2:
+        sys.argv.append('.')
+        print(f"현재 위치에서 [{sys.argv[1]}] 문제를 탐색합니다.")
+        parser = Parser(sys.argv[1], sys.argv[2])
         parser.parse_name_and_complexities()
         parser.save_to_json()
         parser.save_to_html()
+        print("통계 파일이 생성 됐습니다.")
 
-        print(parser.load_table_format())
+    elif len(sys.argv) == 3:
+        print(f"'{sys.argv[2]}' 경로의 [폴더]에서 [{sys.argv[1]}] 문제를 탐색합니다.")
+        parser = Parser(sys.argv[1], sys.argv[2])
+        parser.parse_name_and_complexities()
+        parser.save_to_json()
+        parser.save_to_html()
+        print("통계 파일이 생성 됐습니다.")
 
+    else:  # len(sys.argv) > 3
+        print("너무 많은 인자가 포함 됐습니다.")
+        print("인자 [문제이름]과 [파일 경로]로 최대 2 개만 허용됩니다.")
+        print("인자 이름에 띄어쓰기가 포함된 경우 쌍따옴표로 표현 해주세요.")
+
+
+if __name__ == "__main__":
+    main()
 
