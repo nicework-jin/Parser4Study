@@ -50,7 +50,7 @@
 3. 출력 결과는 [multiple_parser.py]가 위치한 경로에 세 폴더로 나뉘어 저장됩니다.
 - "./result/문제명01/문제명01.html", "./result/문제명02/문제명02.html" , ...
 - "./result/문제명01/문제명01.json", "./result/문제명02/문제명02.json", ...
-- "./result/md/연월일.md"
-    - 여러 개의 html 파일을 하나로 묶은 마크다운 형식의 파일입니다. 
+- "./result/html/연월일.html"
+    - 여러 개의 html 파일을 하나로 묶은 파일입니다. 
 
 ![image](https://user-images.githubusercontent.com/42059680/143489429-37f591cf-6740-4e5a-ac4d-007f1eeba9b0.png)
