@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0887805c-3d35-49ba-925a-300eb58f6867" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ScoreParser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ScoreParser.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test files/202111_딕셔너리 빼기.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test files/202111_딕셔너리 빼기.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test files/parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" />
-    </list>
+    <list default="true" id="0887805c-3d35-49ba-925a-300eb58f6867" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
