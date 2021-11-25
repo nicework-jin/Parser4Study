@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0887805c-3d35-49ba-925a-300eb58f6867" name="Changes" comment="" />
+    <list default="true" id="0887805c-3d35-49ba-925a-300eb58f6867" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiple_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiple_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/md/20211126.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/딕셔너리 빼기/딕셔너리 빼기.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/딕셔너리 빼기/딕셔너리 빼기.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/위장/위장.html" beforeDir="false" afterPath="$PROJECT_DIR$/result/위장/위장.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/위장/위장.json" beforeDir="false" afterPath="$PROJECT_DIR$/result/위장/위장.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,5 +191,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

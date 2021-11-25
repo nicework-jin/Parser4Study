@@ -76,7 +76,6 @@ class Parser(object):
 
     def load_table_format(self):
         df = pd.read_json(f'./result/{self.problem}/{self.problem}.json')
-        print(df)
         return df.sort_values(by=['time_complexity', "space_complexity"], ascending=True)
 
     def make_dirs(self, path):
