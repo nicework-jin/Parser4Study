@@ -37,7 +37,7 @@
 4. 출력 결과는 [parser.py]이 위치한 경로에 두 파일로 저장됩니다.
 - "./result/문제명/문제명.json"
 - "./result/문제명/문제명.html"
-- <table border="1" class="dataframe">
+<table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
