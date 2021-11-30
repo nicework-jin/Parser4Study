@@ -3,6 +3,7 @@ import os
 import re
 import json
 import pandas as pd
+import unicodedata
 
 
 class Parser(object):
@@ -13,7 +14,7 @@ class Parser(object):
         self.names = []
         self.time_complexities = []
         self.space_complexities = []
-        self.filenames = self.get_filenames
+        self.filenames = self.get_filenames()
         self.read_file = iter(self.read_file())
         self.make_dirs(self.saving_route)
 
@@ -38,15 +39,22 @@ class Parser(object):
                 self.space_complexities.append(sum(space_records) / length)
 
     def read_file(self):
-        for filename in self.filenames():
+        for filename in self.filenames:
             with open(f'{self.route}/{filename}') as f:
                 yield filename, f.read()
 
     def get_filenames(self):
+        target = self.problem.replace(' ', '')
+        target = target.lower()
         filenames = []
         try:
             for filename in os.listdir(f'{self.route}/'):
-                if filename.startswith(self.problem):
+                kwd = re.findall('(.*)_', filename)[0]
+                kwd = kwd.replace(' ', '')
+                kwd = unicodedata.normalize("NFC", kwd)
+                kwd = kwd.lower()
+
+                if target == kwd:
                     filenames.append(filename)
 
             if len(filenames) == 0:

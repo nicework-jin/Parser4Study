@@ -54,3 +54,22 @@
     - 여러 개의 html 파일을 하나로 묶은 파일입니다. 
 
 ![image](https://user-images.githubusercontent.com/42059680/143489429-37f591cf-6740-4e5a-ac4d-007f1eeba9b0.png)
+
+### 버전 업데이트 정보
+#### version 1. 
+> parser.py 개발
+- 개별 문제에 대해 시간/공간 복잡도를 계산함.
+
+#### version 2.
+> parser.py의 사용 범위 확장
+- 기존에는 parser.py과 동일한 위치에 있는 문제만 파싱이 가능했는데, 다른 경로에 문제도 파싱이 가능해짐. 
+  
+> multiple_parser.py 기능 추가
+- parser.py를 이용하여 특정 경로에 위치한 "모든 문제"를 파싱함
+ 
+#### version 2.5
+> 검색어에 대한 유연성 제공
+- 띄어쓰기 
+- 영어 대소문자
+- "이중 순위 큐.py"를 실수로 "이중순위.py"로 저장한 경우를 고려하여 두 결과를 가까운 위치에 배치
+- "가장 큰 수 != "가장 큰 수"인 현상 해결 <a href="https://github.com/nicework-jin/StudyOrTest/blob/main/Python/같은%20두%20한글이%20다르다고%20할%20때.py"> - [링크]</a>
