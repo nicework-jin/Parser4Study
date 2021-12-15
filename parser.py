@@ -33,7 +33,7 @@ class Parser(object):
                 time_records.append(float(time))
                 space_records.append(float(space))
 
-            if length := len(time_records) > 0:
+            if (length := len(time_records)) > 0:
                 self.names.append(name)
                 self.time_complexities.append(sum(time_records) / length)
                 self.space_complexities.append(sum(space_records) / length)
