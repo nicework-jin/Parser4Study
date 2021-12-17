@@ -48,15 +48,17 @@ class Parser(object):
         target = target.lower()
         filenames = []
         try:
-            for filename in os.listdir(f'{self.route}/'):
-                kwd = re.findall('(.*)_', filename)[0]
+            for filename in os.listdir(f'{self.route}'):
+                if '.py' not in filename:
+                    continue
+
+                kwd = re.findall('(.+)_.+\.py', filename)[0]
                 kwd = kwd.replace(' ', '')
                 kwd = unicodedata.normalize("NFC", kwd)
                 kwd = kwd.lower()
 
                 if target == kwd:
                     filenames.append(filename)
-
             if len(filenames) == 0:
                 raise Exception("해당 문제를 찾을 수 없습니다")
             return filenames

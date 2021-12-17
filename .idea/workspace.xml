@@ -6,32 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0887805c-3d35-49ba-925a-300eb58f6867" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multiple_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiple_parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/H-Index/H-Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/result/H-Index/H-Index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/H-Index/H-Index.json" beforeDir="false" afterPath="$PROJECT_DIR$/result/H-Index/H-Index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/html/20211126.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/k번째수/k번째수.html" beforeDir="false" afterPath="$PROJECT_DIR$/result/k번째수/k번째수.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/k번째수/k번째수.json" beforeDir="false" afterPath="$PROJECT_DIR$/result/k번째수/k번째수.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/가장 큰 수/가장 큰 수.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/가장 큰 수/가장 큰 수.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/기능개발/기능개발.html" beforeDir="false" afterPath="$PROJECT_DIR$/result/기능개발/기능개발.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/기능개발/기능개발.json" beforeDir="false" afterPath="$PROJECT_DIR$/result/기능개발/기능개발.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/다리를 지나는 트럭/다리를 지나는 트럭.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/다리를 지나는 트럭/다리를 지나는 트럭.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/모의고사/모의고사.html" beforeDir="false" afterPath="$PROJECT_DIR$/result/모의고사/모의고사.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/모의고사/모의고사.json" beforeDir="false" afterPath="$PROJECT_DIR$/result/모의고사/모의고사.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/베스트앨범/베스트앨범.html" beforeDir="false" afterPath="$PROJECT_DIR$/result/베스트앨범/베스트앨범.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/베스트앨범/베스트앨범.json" beforeDir="false" afterPath="$PROJECT_DIR$/result/베스트앨범/베스트앨범.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/소수 찾기/소수 찾기.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/소수 찾기/소수 찾기.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/완주하지 못한 선수/완주하지 못한 선수.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/완주하지 못한 선수/완주하지 못한 선수.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/위장/위장.html" beforeDir="false" afterPath="$PROJECT_DIR$/result/위장/위장.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/위장/위장.json" beforeDir="false" afterPath="$PROJECT_DIR$/result/위장/위장.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/프린터/프린터.html" beforeDir="false" afterPath="$PROJECT_DIR$/result/프린터/프린터.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/프린터/프린터.json" beforeDir="false" afterPath="$PROJECT_DIR$/result/프린터/프린터.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

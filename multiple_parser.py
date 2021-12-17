@@ -15,6 +15,9 @@ class MultipleParser(object):
     def load_and_parse_files(self):
         kwd_with_filename_list = []
         for filename in os.listdir(self.route):
+            if '.py' not in filename:
+                continue
+
             kwd = re.findall('(.+)_.+\.py', filename)[0]
             kwd = kwd.replace(' ', '')
             kwd = unicodedata.normalize('NFC', kwd)
