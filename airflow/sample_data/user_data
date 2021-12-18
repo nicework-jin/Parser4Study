@@ -1,0 +1,31 @@
+{"results":[
+        {"gender":"female",
+        "name":{"title":"Mrs","first":"سوگند","last":"رضایی"},
+        "location":{
+            "street":{"number":4761,"name":"میدان 15خرداد"},
+            "city":"سبزوار","state":"البرز",
+            "country":"Iran",
+            "postcode":71755,
+            "coordinates":{"latitude":"29.3009","longitude":"40.8587"
+        },
+        "timezone":{"offset":"-6:00","description":"Central Time (US & Canada), Mexico City"}},
+        "email":"swgnd.rdyy@example.com",
+        "login":{
+            "uuid":"82637a82-aafe-4c54-bc08-5239a3964814",
+            "username":"lazyfrog245",
+            "password":"159753",
+            "salt":"P04XvrBW",
+            "md5":"02241ce2e706d7ae9e4edbbe99745beb",
+            "sha1":"4f23a052e9850dcc72ffe17cfdbd09e622929a44",
+            "sha256":"3c894e7c2df08d156f4f6822952e9d1e03186138cebcb2336da11a8eb0ca4d82"
+            },
+        "dob":{"date":"1956-05-10T15:45:47.726Z","age":65},
+        "registered":{"date":"2012-12-24T22:37:02.571Z","age":9},
+        "phone":"025-42502422",
+        "cell":"0936-961-3541",
+        "id":{"name":"","value":null},
+        "picture":{"large":"https://randomuser.me/api/portraits/women/61.jpg",
+        "medium":"https://randomuser.me/api/portraits/med/women/61.jpg",
+        "thumbnail":"https://randomuser.me/api/portraits/thumb/women/61.jpg"},"nat":"IR"}
+        ]
+

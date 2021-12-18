@@ -1,0 +1,25 @@
+[2021-12-16 08:18:48,085] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-12-16T08:18:34.505499+00:00 [queued]>
+[2021-12-16 08:18:48,112] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-12-16T08:18:34.505499+00:00 [queued]>
+[2021-12-16 08:18:48,115] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-16 08:18:48,115] {taskinstance.py:1068} INFO - Starting attempt 1 of 1
+[2021-12-16 08:18:48,116] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-16 08:18:48,140] {taskinstance.py:1087} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2021-12-16T08:18:34.505499+00:00
+[2021-12-16 08:18:48,142] {standard_task_runner.py:52} INFO - Started process 47159 to run task
+[2021-12-16 08:18:48,155] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'user_processing', 'extracting_user', '2021-12-16T08:18:34.505499+00:00', '--job-id', '22', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpk2y1rkr3', '--error-file', '/tmp/tmp5ijk2s02']
+[2021-12-16 08:18:48,161] {standard_task_runner.py:77} INFO - Job 22: Subtask extracting_user
+[2021-12-16 08:18:48,274] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2021-12-16T08:18:34.505499+00:00 [running]> on host airflowvm
+[2021-12-16 08:18:48,363] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-16T08:18:34.505499+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-12-16T08:18:34.505499+00:00
+[2021-12-16 08:18:48,371] {http.py:111} INFO - Calling HTTP method
+[2021-12-16 08:18:48,390] {base.py:69} INFO - Using connection to: id: user_api. Host: https://randomuser.me, Port: None, Schema: , Login: , Password: ***, extra: {}
+[2021-12-16 08:18:48,400] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-12-16 08:18:48,861] {http.py:115} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Linus","last":"Neugebauer"},"location":{"street":{"number":4293,"name":"Friedhofstraße"},"city":"Neuruppin","state":"Schleswig-Holstein","country":"Germany","postcode":19342,"coordinates":{"latitude":"-45.3036","longitude":"-43.4521"},"timezone":{"offset":"-8:00","description":"Pacific Time (US & Canada)"}},"email":"linus.neugebauer@example.com","login":{"uuid":"a92659e1-60b9-4227-9614-27aad7840b09","username":"beautifulfish224","password":"gamma","salt":"xdUMkkEu","md5":"cfaae7d3435738a1eb87c2223249a633","sha1":"c34fa99464a0991185e70272b9eca0b16194ef80","sha256":"8f7684fe40c5a1a5bc40fafd4d7ac9a1083232d9325049c3407b372e88864bb4"},"dob":{"date":"1969-09-11T19:55:40.973Z","age":52},"registered":{"date":"2013-04-22T14:12:41.146Z","age":8},"phone":"0845-2070601","cell":"0177-1029715","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/men/64.jpg","medium":"https://randomuser.me/api/portraits/med/men/64.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/64.jpg"},"nat":"DE"}],"info":{"seed":"87afe78d151db7d7","results":1,"page":1,"version":"1.3"}}
+[2021-12-16 08:18:48,925] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20211216T081834, start_date=20211216T081848, end_date=20211216T081848
+[2021-12-16 08:18:48,974] {taskinstance.py:1245} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-16 08:18:49,010] {local_task_job.py:151} INFO - Task exited with return code 0

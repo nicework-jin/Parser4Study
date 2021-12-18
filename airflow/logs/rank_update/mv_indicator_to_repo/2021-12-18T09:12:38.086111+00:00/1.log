@@ -1,0 +1,37 @@
+[2021-12-18 09:13:12,878] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.mv_indicator_to_repo 2021-12-18T09:12:38.086111+00:00 [queued]>
+[2021-12-18 09:13:12,904] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.mv_indicator_to_repo 2021-12-18T09:12:38.086111+00:00 [queued]>
+[2021-12-18 09:13:12,904] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 09:13:12,904] {taskinstance.py:1068} INFO - Starting attempt 1 of 1
+[2021-12-18 09:13:12,905] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 09:13:12,927] {taskinstance.py:1087} INFO - Executing <Task(BashOperator): mv_indicator_to_repo> on 2021-12-18T09:12:38.086111+00:00
+[2021-12-18 09:13:12,929] {standard_task_runner.py:52} INFO - Started process 85909 to run task
+[2021-12-18 09:13:12,949] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'rank_update', 'mv_indicator_to_repo', '2021-12-18T09:12:38.086111+00:00', '--job-id', '61', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/rank_update.py', '--cfg-path', '/tmp/tmp9wycu9kt', '--error-file', '/tmp/tmp259t235z']
+[2021-12-18 09:13:12,955] {standard_task_runner.py:77} INFO - Job 61: Subtask mv_indicator_to_repo
+[2021-12-18 09:13:13,055] {logging_mixin.py:104} INFO - Running <TaskInstance: rank_update.mv_indicator_to_repo 2021-12-18T09:12:38.086111+00:00 [running]> on host airflowvm
+[2021-12-18 09:13:13,259] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=rank_update
+AIRFLOW_CTX_TASK_ID=mv_indicator_to_repo
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-18T09:12:38.086111+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-12-18T09:12:38.086111+00:00
+[2021-12-18 09:13:13,260] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-12-18 09:13:13,260] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'mv /home/airflow/airflow/result/html/20211218.html /home/airflow/Test/rank.md']
+[2021-12-18 09:13:13,280] {subprocess.py:75} INFO - Output:
+[2021-12-18 09:13:13,289] {subprocess.py:79} INFO - mv: cannot stat '/home/airflow/airflow/result/html/20211218.html': No such file or directory
+[2021-12-18 09:13:13,291] {subprocess.py:83} INFO - Command exited with return code 1
+[2021-12-18 09:13:13,304] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/operators/bash.py", line 180, in execute
+    raise AirflowException('Bash command failed. The command returned a non-zero exit code.')
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code.
+[2021-12-18 09:13:13,309] {taskinstance.py:1524} INFO - Marking task as FAILED. dag_id=rank_update, task_id=mv_indicator_to_repo, execution_date=20211218T091238, start_date=20211218T091312, end_date=20211218T091313
+[2021-12-18 09:13:13,406] {local_task_job.py:151} INFO - Task exited with return code 1

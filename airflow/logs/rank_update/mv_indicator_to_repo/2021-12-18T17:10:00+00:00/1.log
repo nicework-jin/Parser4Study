@@ -1,0 +1,26 @@
+[2021-12-18 17:11:08,677] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.mv_indicator_to_repo 2021-12-18T17:10:00+00:00 [queued]>
+[2021-12-18 17:11:08,682] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.mv_indicator_to_repo 2021-12-18T17:10:00+00:00 [queued]>
+[2021-12-18 17:11:08,683] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 17:11:08,683] {taskinstance.py:1068} INFO - Starting attempt 1 of 1
+[2021-12-18 17:11:08,683] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 17:11:08,697] {taskinstance.py:1087} INFO - Executing <Task(BashOperator): mv_indicator_to_repo> on 2021-12-18T17:10:00+00:00
+[2021-12-18 17:11:08,698] {standard_task_runner.py:52} INFO - Started process 14669 to run task
+[2021-12-18 17:11:08,705] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'rank_update', 'mv_indicator_to_repo', '2021-12-18T17:10:00+00:00', '--job-id', '202', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/rank_update.py', '--cfg-path', '/tmp/tmpm4xwrnyi', '--error-file', '/tmp/tmpzxn5ziyw']
+[2021-12-18 17:11:08,706] {standard_task_runner.py:77} INFO - Job 202: Subtask mv_indicator_to_repo
+[2021-12-18 17:11:08,755] {logging_mixin.py:104} INFO - Running <TaskInstance: rank_update.mv_indicator_to_repo 2021-12-18T17:10:00+00:00 [running]> on host airflowvm
+[2021-12-18 17:11:08,840] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=rank_update
+AIRFLOW_CTX_TASK_ID=mv_indicator_to_repo
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-18T17:10:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-18T17:10:00+00:00
+[2021-12-18 17:11:08,840] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-12-18 17:11:08,841] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'mv /tmp/result/html/rank.html /home/airflow/Test/rank.md']
+[2021-12-18 17:11:08,845] {subprocess.py:75} INFO - Output:
+[2021-12-18 17:11:08,847] {subprocess.py:83} INFO - Command exited with return code 0
+[2021-12-18 17:11:08,865] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=rank_update, task_id=mv_indicator_to_repo, execution_date=20211218T171000, start_date=20211218T171108, end_date=20211218T171108
+[2021-12-18 17:11:08,892] {taskinstance.py:1245} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-12-18 17:11:08,918] {local_task_job.py:151} INFO - Task exited with return code 0

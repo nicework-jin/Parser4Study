@@ -1,0 +1,25 @@
+[2021-12-16 07:38:26,773] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-12-16T07:38:15.017356+00:00 [queued]>
+[2021-12-16 07:38:26,783] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-12-16T07:38:15.017356+00:00 [queued]>
+[2021-12-16 07:38:26,791] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-16 07:38:26,792] {taskinstance.py:1068} INFO - Starting attempt 1 of 1
+[2021-12-16 07:38:26,792] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-16 07:38:26,807] {taskinstance.py:1087} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2021-12-16T07:38:15.017356+00:00
+[2021-12-16 07:38:26,809] {standard_task_runner.py:52} INFO - Started process 38482 to run task
+[2021-12-16 07:38:26,827] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'user_processing', 'extracting_user', '2021-12-16T07:38:15.017356+00:00', '--job-id', '17', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmprftuzkxy', '--error-file', '/tmp/tmp2zclvmy0']
+[2021-12-16 07:38:26,832] {standard_task_runner.py:77} INFO - Job 17: Subtask extracting_user
+[2021-12-16 07:38:26,911] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2021-12-16T07:38:15.017356+00:00 [running]> on host airflowvm
+[2021-12-16 07:38:26,981] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-16T07:38:15.017356+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-12-16T07:38:15.017356+00:00
+[2021-12-16 07:38:26,983] {http.py:111} INFO - Calling HTTP method
+[2021-12-16 07:38:26,999] {base.py:69} INFO - Using connection to: id: user_api. Host: https://randomuser.me, Port: None, Schema: , Login: , Password: ***, extra: {}
+[2021-12-16 07:38:27,001] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-12-16 07:38:27,393] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Miss","first":"Sippie","last":"Jongerden"},"location":{"street":{"number":5576,"name":"Hagendijk"},"city":"Oud-Beijerland","state":"Gelderland","country":"Netherlands","postcode":12661,"coordinates":{"latitude":"37.6126","longitude":"163.0458"},"timezone":{"offset":"+10:00","description":"Eastern Australia, Guam, Vladivostok"}},"email":"sippie.jongerden@example.com","login":{"uuid":"e54f8aa4-0d19-4de1-9595-3ddd1a258c4f","username":"greendog851","password":"mmmmm","salt":"ZgK25hYv","md5":"6f375be9817bbd2e97f4d7eb69b1b7d5","sha1":"ff3a7efa4a8ab54421b818df5e7a04d380382eb7","sha256":"b2736516376f65911b3a3ef5f42507b9e1e55fb2bad21ffdbb1066189a66e359"},"dob":{"date":"1989-08-06T02:49:00.272Z","age":32},"registered":{"date":"2017-04-27T04:39:24.954Z","age":4},"phone":"(613)-572-9936","cell":"(136)-716-9546","id":{"name":"BSN","value":"66846721"},"picture":{"large":"https://randomuser.me/api/portraits/women/7.jpg","medium":"https://randomuser.me/api/portraits/med/women/7.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/7.jpg"},"nat":"NL"}],"info":{"seed":"1aeb7e1da709c05e","results":1,"page":1,"version":"1.3"}}
+[2021-12-16 07:38:27,432] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20211216T073815, start_date=20211216T073826, end_date=20211216T073827
+[2021-12-16 07:38:27,466] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-12-16 07:38:27,483] {local_task_job.py:151} INFO - Task exited with return code 0

@@ -1,0 +1,67 @@
+[2021-12-18 17:09:15,141] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.git_commit 2021-12-18T17:08:00+00:00 [queued]>
+[2021-12-18 17:09:15,147] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.git_commit 2021-12-18T17:08:00+00:00 [queued]>
+[2021-12-18 17:09:15,148] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 17:09:15,148] {taskinstance.py:1068} INFO - Starting attempt 1 of 1
+[2021-12-18 17:09:15,148] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 17:09:15,162] {taskinstance.py:1087} INFO - Executing <Task(BashOperator): git_commit> on 2021-12-18T17:08:00+00:00
+[2021-12-18 17:09:15,163] {standard_task_runner.py:52} INFO - Started process 13960 to run task
+[2021-12-18 17:09:15,169] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'rank_update', 'git_commit', '2021-12-18T17:08:00+00:00', '--job-id', '194', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/rank_update.py', '--cfg-path', '/tmp/tmp8dpez3_o', '--error-file', '/tmp/tmp_qnt98rq']
+[2021-12-18 17:09:15,169] {standard_task_runner.py:77} INFO - Job 194: Subtask git_commit
+[2021-12-18 17:09:15,215] {logging_mixin.py:104} INFO - Running <TaskInstance: rank_update.git_commit 2021-12-18T17:08:00+00:00 [running]> on host airflowvm
+[2021-12-18 17:09:15,347] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=rank_update
+AIRFLOW_CTX_TASK_ID=git_commit
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-18T17:08:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-18T17:08:00+00:00
+[2021-12-18 17:09:15,347] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-12-18 17:09:15,348] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'git --git-dir=/home/airflow/Test/.git/ --work-tree=/home/airflow/Test/.git/ commit -m "Auto-update for rank"']
+[2021-12-18 17:09:15,354] {subprocess.py:75} INFO - Output:
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - On branch main
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - Your branch is up to date with 'origin/main'.
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - Changes not staged for commit:
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO -   (use "git add/rm <file>..." to update what will be committed)
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	deleted:    Hi,
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	deleted:    README.md
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	deleted:    hello.py
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	deleted:    main.txt
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	deleted:    rank.md
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	deleted:    t.md
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - Untracked files:
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO -   (use "git add <file>..." to include in what will be committed)
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	COMMIT_EDITMSG
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	COMMIT_EDITMSG.save
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	FETCH_HEAD
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	HEAD
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	ORIG_HEAD
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	config
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	description
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	hooks/
+[2021-12-18 17:09:15,366] {subprocess.py:79} INFO - 	index
+[2021-12-18 17:09:15,367] {subprocess.py:79} INFO - 	info/
+[2021-12-18 17:09:15,367] {subprocess.py:79} INFO - 	logs/
+[2021-12-18 17:09:15,367] {subprocess.py:79} INFO - 	objects/
+[2021-12-18 17:09:15,367] {subprocess.py:79} INFO - 	packed-refs
+[2021-12-18 17:09:15,367] {subprocess.py:79} INFO - 	refs/
+[2021-12-18 17:09:15,367] {subprocess.py:79} INFO - 
+[2021-12-18 17:09:15,367] {subprocess.py:79} INFO - no changes added to commit (use "git add" and/or "git commit -a")
+[2021-12-18 17:09:15,368] {subprocess.py:83} INFO - Command exited with return code 1
+[2021-12-18 17:09:15,391] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/operators/bash.py", line 180, in execute
+    raise AirflowException('Bash command failed. The command returned a non-zero exit code.')
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code.
+[2021-12-18 17:09:15,394] {taskinstance.py:1524} INFO - Marking task as FAILED. dag_id=rank_update, task_id=git_commit, execution_date=20211218T170800, start_date=20211218T170915, end_date=20211218T170915
+[2021-12-18 17:09:15,464] {local_task_job.py:151} INFO - Task exited with return code 1

@@ -36,17 +36,17 @@ class MultipleParser(object):
             parser.save_to_html()
 
     def loads_and_combine_with_markdown(self):
-        saving_path = './result/html'
+        saving_path = '/tmp/result/html'
         if not os.path.exists(saving_path):
             os.makedirs(saving_path)
 
         # "이중순위큐"를 실수로 "이중순위"로 입력했을 경우를 고려하여 가깝게 배치
         self.problems.sort()
 
-        with open(f'{saving_path}/{datetime.today().strftime("%Y%m%d")}.html', 'w') as w:
+        with open(f'{saving_path}/rank.html', 'w') as w:
             for problem in self.problems:
                 target = ''
-                for dir_name in os.listdir('./result'):
+                for dir_name in os.listdir('/tmp/result'):
                     kwd = dir_name.replace(' ', '')
                     kwd = unicodedata.normalize('NFC', kwd)
                     kwd = kwd.lower()
@@ -58,7 +58,7 @@ class MultipleParser(object):
                 if target == '':
                     continue
 
-                with open(f'./result/{target}/{target}.html') as r:
+                with open(f'/tmp/result/{target}/{target}.html') as r:
                     w.write(f"{target} \n\n")
                     w.write(r.read())
 
@@ -67,3 +67,4 @@ if __name__ == "__main__":
     multiple_parser = MultipleParser(sys.argv[1])
     multiple_parser.load_and_parse_files()
     multiple_parser.loads_and_combine_with_markdown()
+    
