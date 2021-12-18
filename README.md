@@ -33,9 +33,9 @@
 3. [~/AlgorithmStudy_211124/211130/] 경로의 폴더에 "딕셔너리 빼기"문제가 있는 경우
 - python parser.py "딕셔너리 빼기" ~/AlgorithmStudy_211124/211130/
 
-4. 출력 결과는 [parser.py]이 위치한 경로에 두 파일로 저장됩니다.
-- "./result/문제명/문제명.json"
-- "./result/문제명/문제명.html"
+4. 출력 결과는 /tmp 경로에 두 파일로 저장됩니다.
+- "/tmp/result/문제명/문제명.json"
+- "/tmp/result/문제명/문제명.html"
 
 ![image](https://user-images.githubusercontent.com/42059680/143489072-f463cb75-be74-4d7e-b198-4b8e73627145.png)
 
@@ -48,9 +48,9 @@
 - python multiple_parser.py ~/AlgorithmStudy_211124/211130/
 
 3. 출력 결과는 [multiple_parser.py]가 위치한 경로에 세 폴더로 나뉘어 저장됩니다.
-- "./result/문제명01/문제명01.html", "./result/문제명02/문제명02.html" , ...
-- "./result/문제명01/문제명01.json", "./result/문제명02/문제명02.json", ...
-- "./result/html/연월일.html"
+- "/tmp/result/문제명01/문제명01.html", "/tmp/result/문제명02/문제명02.html" , ...
+- "tmp/result/문제명01/문제명01.json", "/tmp/result/문제명02/문제명02.json", ...
+- "/tmp/result/html/연월일.html"
     - 여러 개의 html 파일을 하나로 묶은 파일입니다. 
 
 ![image](https://user-images.githubusercontent.com/42059680/143489429-37f591cf-6740-4e5a-ac4d-007f1eeba9b0.png)
@@ -73,3 +73,8 @@
 - 영어 대소문자
 - "이중 순위 큐.py"를 실수로 "이중순위.py"로 저장한 경우를 고려하여 두 결과를 가까운 위치에 배치
 - "가장 큰 수 != "가장 큰 수"인 현상 해결 <a href="https://github.com/nicework-jin/StudyOrTest/blob/main/Python/같은%20두%20한글이%20다르다고%20할%20때.py"> - [링크]</a>
+
+#### version 3.0
+> 스케줄링 기능을 추가
+- Airflow를 이용하여 10분 간격으로 깃허브 데이터를 읽고, multile_parser.py 실행함.
+- 실행 결과는 github에 md파일로 업데이트 함. 
