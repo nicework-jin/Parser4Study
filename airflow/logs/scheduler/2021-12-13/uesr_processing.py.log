@@ -1,0 +1,155 @@
+[2021-12-13 07:40:06,397] {scheduler_job.py:182} INFO - Started process (PID=37205) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:40:06,403] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:40:06,404] {logging_mixin.py:104} INFO - [2021-12-13 07:40:06,404] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:40:06,409] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:40:06,424] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.029 seconds
+[2021-12-13 07:40:38,004] {scheduler_job.py:182} INFO - Started process (PID=37340) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:40:38,005] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:40:38,007] {logging_mixin.py:104} INFO - [2021-12-13 07:40:38,006] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:40:38,008] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:40:38,015] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.014 seconds
+[2021-12-13 07:41:19,460] {scheduler_job.py:182} INFO - Started process (PID=37483) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:41:19,462] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:41:19,463] {logging_mixin.py:104} INFO - [2021-12-13 07:41:19,463] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:41:19,464] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:41:19,471] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.014 seconds
+[2021-12-13 07:41:55,174] {scheduler_job.py:182} INFO - Started process (PID=37609) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:41:55,175] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:41:55,178] {logging_mixin.py:104} INFO - [2021-12-13 07:41:55,178] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:41:55,183] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:41:55,191] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.023 seconds
+[2021-12-13 07:42:29,250] {scheduler_job.py:182} INFO - Started process (PID=37727) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:42:29,252] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:42:29,254] {logging_mixin.py:104} INFO - [2021-12-13 07:42:29,254] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:42:29,294] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-12-13 07:42:29,297] {logging_mixin.py:104} INFO - [2021-12-13 07:42:29,296] {dagbag.py:320} ERROR - Failed to import: /home/airflow/airflow/dags/uesr_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/airflow/airflow/dags/uesr_processing.py", line 14, in <module>
+    creating_table = SqliteOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 179, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/decorators.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py", line 57, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 174, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['task_id'] is required
+[2021-12-13 07:42:29,298] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:42:29,325] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.086 seconds
+[2021-12-13 07:43:08,657] {scheduler_job.py:182} INFO - Started process (PID=37855) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:43:08,664] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:43:08,665] {logging_mixin.py:104} INFO - [2021-12-13 07:43:08,665] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:43:08,702] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-12-13 07:43:08,712] {logging_mixin.py:104} INFO - [2021-12-13 07:43:08,709] {dagbag.py:320} ERROR - Failed to import: /home/airflow/airflow/dags/uesr_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/airflow/airflow/dags/uesr_processing.py", line 14, in <module>
+    creating_table = SqliteOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 179, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/decorators.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py", line 57, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 174, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['task_id'] is required
+[2021-12-13 07:43:08,712] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:43:08,761] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.117 seconds
+[2021-12-13 07:43:42,940] {scheduler_job.py:182} INFO - Started process (PID=37966) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:43:42,951] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:43:42,954] {logging_mixin.py:104} INFO - [2021-12-13 07:43:42,954] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:43:42,988] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-12-13 07:43:43,006] {logging_mixin.py:104} INFO - [2021-12-13 07:43:42,992] {dagbag.py:320} ERROR - Failed to import: /home/airflow/airflow/dags/uesr_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/airflow/airflow/dags/uesr_processing.py", line 14, in <module>
+    creating_table = SqliteOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 179, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/decorators.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py", line 57, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 174, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['task_id'] is required
+[2021-12-13 07:43:43,007] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:43:43,042] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.113 seconds
+[2021-12-13 07:44:20,678] {scheduler_job.py:182} INFO - Started process (PID=38088) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:44:20,680] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:44:20,681] {logging_mixin.py:104} INFO - [2021-12-13 07:44:20,681] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:44:20,696] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-12-13 07:44:20,699] {logging_mixin.py:104} INFO - [2021-12-13 07:44:20,698] {dagbag.py:320} ERROR - Failed to import: /home/airflow/airflow/dags/uesr_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/airflow/airflow/dags/uesr_processing.py", line 14, in <module>
+    creating_table = SqliteOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 179, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/decorators.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py", line 57, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 174, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['task_id'] is required
+[2021-12-13 07:44:20,700] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:44:20,714] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.039 seconds
+[2021-12-13 07:44:52,050] {scheduler_job.py:182} INFO - Started process (PID=38212) to work on /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:44:52,052] {scheduler_job.py:633} INFO - Processing file /home/airflow/airflow/dags/uesr_processing.py for tasks to queue
+[2021-12-13 07:44:52,052] {logging_mixin.py:104} INFO - [2021-12-13 07:44:52,052] {dagbag.py:487} INFO - Filling up the DagBag from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:44:52,084] {logging_mixin.py:104} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py:25 DeprecationWarning: This decorator is deprecated.
+
+In previous versions, all subclasses of BaseOperator must use apply_default decorator for the`default_args` feature to work properly.
+
+In current version, it is optional. The decorator is applied automatically using the metaclass.
+[2021-12-13 07:44:52,092] {logging_mixin.py:104} INFO - [2021-12-13 07:44:52,091] {dagbag.py:320} ERROR - Failed to import: /home/airflow/airflow/dags/uesr_processing.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 317, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/airflow/airflow/dags/uesr_processing.py", line 14, in <module>
+    creating_table = SqliteOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 179, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/decorators.py", line 50, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/sqlite/operators/sqlite.py", line 57, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 174, in apply_defaults
+    raise AirflowException(msg)
+airflow.exceptions.AirflowException: Argument ['task_id'] is required
+[2021-12-13 07:44:52,096] {scheduler_job.py:645} WARNING - No viable dags retrieved from /home/airflow/airflow/dags/uesr_processing.py
+[2021-12-13 07:44:52,136] {scheduler_job.py:190} INFO - Processing /home/airflow/airflow/dags/uesr_processing.py took 0.092 seconds

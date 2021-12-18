@@ -1,0 +1,27 @@
+[2021-12-18 16:55:41,259] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.git_push 2021-12-18T16:09:43.600276+00:00 [queued]>
+[2021-12-18 16:55:41,264] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.git_push 2021-12-18T16:09:43.600276+00:00 [queued]>
+[2021-12-18 16:55:41,265] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 16:55:41,265] {taskinstance.py:1068} INFO - Starting attempt 2 of 2
+[2021-12-18 16:55:41,265] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 16:55:41,278] {taskinstance.py:1087} INFO - Executing <Task(BashOperator): git_push> on 2021-12-18T16:09:43.600276+00:00
+[2021-12-18 16:55:41,279] {standard_task_runner.py:52} INFO - Started process 9581 to run task
+[2021-12-18 16:55:41,285] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'rank_update', 'git_push', '2021-12-18T16:09:43.600276+00:00', '--job-id', '159', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/rank_update.py', '--cfg-path', '/tmp/tmp32h270fc', '--error-file', '/tmp/tmp8fhxtw02']
+[2021-12-18 16:55:41,286] {standard_task_runner.py:77} INFO - Job 159: Subtask git_push
+[2021-12-18 16:55:41,325] {logging_mixin.py:104} INFO - Running <TaskInstance: rank_update.git_push 2021-12-18T16:09:43.600276+00:00 [running]> on host airflowvm
+[2021-12-18 16:55:41,417] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=rank_update
+AIRFLOW_CTX_TASK_ID=git_push
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-18T16:09:43.600276+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-12-18T16:09:43.600276+00:00
+[2021-12-18 16:55:41,418] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-12-18 16:55:41,419] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'git --git-dir=/home/airflow/Test/.git/ --work-tree=/home/airflow/Test/.git/ push']
+[2021-12-18 16:55:41,422] {subprocess.py:75} INFO - Output:
+[2021-12-18 16:55:42,439] {subprocess.py:79} INFO - Everything up-to-date
+[2021-12-18 16:55:42,443] {subprocess.py:83} INFO - Command exited with return code 0
+[2021-12-18 16:55:42,488] {taskinstance.py:1184} INFO - Marking task as SUCCESS. dag_id=rank_update, task_id=git_push, execution_date=20211218T160943, start_date=20211218T165541, end_date=20211218T165542
+[2021-12-18 16:55:42,506] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-12-18 16:55:42,509] {local_task_job.py:151} INFO - Task exited with return code 0

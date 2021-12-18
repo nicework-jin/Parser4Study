@@ -1,0 +1,60 @@
+[2021-12-18 13:24:56,215] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.make_indicator 2021-12-18T11:12:28.565672+00:00 [queued]>
+[2021-12-18 13:24:56,221] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: rank_update.make_indicator 2021-12-18T11:12:28.565672+00:00 [queued]>
+[2021-12-18 13:24:56,221] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 13:24:56,222] {taskinstance.py:1068} INFO - Starting attempt 4 of 4
+[2021-12-18 13:24:56,222] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-18 13:24:56,235] {taskinstance.py:1087} INFO - Executing <Task(BashOperator): make_indicator> on 2021-12-18T11:12:28.565672+00:00
+[2021-12-18 13:24:56,236] {standard_task_runner.py:52} INFO - Started process 17530 to run task
+[2021-12-18 13:24:56,242] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'rank_update', 'make_indicator', '2021-12-18T11:12:28.565672+00:00', '--job-id', '107', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/rank_update.py', '--cfg-path', '/tmp/tmp9erzww8l', '--error-file', '/tmp/tmpcw9dpl9n']
+[2021-12-18 13:24:56,243] {standard_task_runner.py:77} INFO - Job 107: Subtask make_indicator
+[2021-12-18 13:24:56,281] {logging_mixin.py:104} INFO - Running <TaskInstance: rank_update.make_indicator 2021-12-18T11:12:28.565672+00:00 [running]> on host airflowvm
+[2021-12-18 13:24:56,395] {taskinstance.py:1280} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=rank_update
+AIRFLOW_CTX_TASK_ID=make_indicator
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-18T11:12:28.565672+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-12-18T11:12:28.565672+00:00
+[2021-12-18 13:24:56,400] {subprocess.py:52} INFO - Tmp dir root location: 
+ /tmp
+[2021-12-18 13:24:56,403] {subprocess.py:63} INFO - Running command: ['bash', '-c', 'python3 /home/airflow/parser4Study/multiple_parser.py "/home/airflow/AlgorithmStudy_211124/211221/"']
+[2021-12-18 13:24:56,412] {subprocess.py:75} INFO - Output:
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO - Traceback (most recent call last):
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/parser4Study/multiple_parser.py", line 68, in <module>
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     multiple_parser.load_and_parse_files()
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/parser4Study/multiple_parser.py", line 36, in load_and_parse_files
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     parser.save_to_html()
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/parser4Study/parser.py", line 85, in save_to_html
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     self.load_table_format().to_html(f'{self.saving_route}/{self.problem}.html')
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/parser4Study/parser.py", line 88, in load_table_format
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     df = pd.read_json(f'./result/{self.problem}/{self.problem}.json')
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/sandbox/lib/python3.8/site-packages/pandas/util/_decorators.py", line 199, in wrapper
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     return func(*args, **kwargs)
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/sandbox/lib/python3.8/site-packages/pandas/util/_decorators.py", line 299, in wrapper
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     return func(*args, **kwargs)
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/sandbox/lib/python3.8/site-packages/pandas/io/json/_json.py", line 563, in read_json
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     return json_reader.read()
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/sandbox/lib/python3.8/site-packages/pandas/io/json/_json.py", line 694, in read
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     obj = self._get_object_parser(self.data)
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -   File "/home/airflow/sandbox/lib/python3.8/site-packages/pandas/io/json/_json.py", line 716, in _get_object_parser
+[2021-12-18 13:24:57,273] {subprocess.py:79} INFO -     obj = FrameParser(json, **kwargs).parse()
+[2021-12-18 13:24:57,274] {subprocess.py:79} INFO -   File "/home/airflow/sandbox/lib/python3.8/site-packages/pandas/io/json/_json.py", line 831, in parse
+[2021-12-18 13:24:57,274] {subprocess.py:79} INFO -     self._parse_no_numpy()
+[2021-12-18 13:24:57,274] {subprocess.py:79} INFO -   File "/home/airflow/sandbox/lib/python3.8/site-packages/pandas/io/json/_json.py", line 1079, in _parse_no_numpy
+[2021-12-18 13:24:57,274] {subprocess.py:79} INFO -     loads(json, precise_float=self.precise_float), dtype=None
+[2021-12-18 13:24:57,274] {subprocess.py:79} INFO - ValueError: Expected object or value
+[2021-12-18 13:24:57,399] {subprocess.py:83} INFO - Command exited with return code 1
+[2021-12-18 13:24:57,409] {taskinstance.py:1481} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1137, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1311, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1341, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/sandbox/lib/python3.8/site-packages/airflow/operators/bash.py", line 180, in execute
+    raise AirflowException('Bash command failed. The command returned a non-zero exit code.')
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code.
+[2021-12-18 13:24:57,410] {taskinstance.py:1524} INFO - Marking task as FAILED. dag_id=rank_update, task_id=make_indicator, execution_date=20211218T111228, start_date=20211218T132456, end_date=20211218T132457
+[2021-12-18 13:24:57,458] {local_task_job.py:151} INFO - Task exited with return code 1
