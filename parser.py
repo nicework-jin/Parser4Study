@@ -10,7 +10,7 @@ class Parser(object):
     def __init__(self, problem, route):
         self.problem = problem
         self.route = route
-        self.saving_route = f'./result/{self.problem}'
+        self.saving_route = f'/tmp/result/{self.problem}'
         self.names = []
         self.time_complexities = []
         self.space_complexities = []
@@ -85,7 +85,7 @@ class Parser(object):
         self.load_table_format().to_html(f'{self.saving_route}/{self.problem}.html')
 
     def load_table_format(self):
-        df = pd.read_json(f'./result/{self.problem}/{self.problem}.json')
+        df = pd.read_json(f'/tmp/result/{self.problem}/{self.problem}.json')
         return df.sort_values(by=['time_complexity', "space_complexity"], ascending=True)
 
     def make_dirs(self, path):
